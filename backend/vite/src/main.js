@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 
-import TestApp from './apps/TestApp.vue'
+import App from './apps/App.vue'
 
-if (document.getElementById('test-app')) {
-    createApp(TestApp).mount('#test-app')
+if (document.getElementById('app')) {
+    createApp(App).mount('#app')
 }

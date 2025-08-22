@@ -8,5 +8,5 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="task-index">
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <div id="test-app"></div>
+    <div id="app"></div>
 </div>
