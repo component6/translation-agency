@@ -4,6 +4,7 @@
 /** @var string $content */
 
 use backend\assets\AppAsset;
+use backend\components\Vite;
 use common\widgets\Alert;
 use yii\bootstrap5\Breadcrumbs;
 use yii\bootstrap5\Html;
@@ -39,6 +40,7 @@ AppAsset::register($this);
         ['label' => 'Tasks', 'url' => ['/task']],
         ['label' => 'Employees', 'url' => ['/employee']],
         ['label' => 'Employees task', 'url' => ['/employee-task']],
+        ['label' => 'App', 'url' => ['/app']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
@@ -79,6 +81,7 @@ AppAsset::register($this);
 </footer>
 
 <?php $this->endBody() ?>
+<?= Vite::render() ?>
 </body>
 </html>
 <?php $this->endPage();
