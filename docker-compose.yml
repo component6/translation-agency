@@ -3,6 +3,7 @@ version: '3.2'
 services:
 
   frontend:
+    container_name: tra-age-frontend
     build: frontend
     ports:
       - 20080:80
@@ -13,6 +14,7 @@ services:
       - ./:/app
 
   backend:
+    container_name: tra-age-backend
     build: backend
     ports:
       - 21080:80
@@ -23,6 +25,7 @@ services:
       - ./:/app
 
   mysql:
+    container_name: tra-age-mysql
     image: mysql:5.7
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
@@ -31,6 +34,7 @@ services:
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
 
   adminer:
+    container_name: tra-age-adminer
     image: adminer
     restart: always
     ports:
